@@ -99,10 +99,7 @@ namespace Graphics.Transforms2D
                 _rotateAngle += RotateStep * DeltaTime;
             if (_keys[Ctrl].Down && _keys[Down].Down)
                 _rotateAngle -= RotateStep * DeltaTime;
-        }
 
-        public override void RenderFrame()
-        {            
             // We can either calculate  center of mass once and apply
             // transformations to it as if it were a control point of the shape
             // or we can calculate center of mass from transformed control
@@ -120,7 +117,10 @@ namespace Graphics.Transforms2D
             var t = transform.Build();
             for (var i = 0; i < _initialControlPoints.Length; i++)
                 _transformedControlPoints[i] = _initialControlPoints[i] * t;
+        }
 
+        public override void RenderFrame()
+        {            
             for (var i = 1; i < _transformedControlPoints.Length; i++)
                 DrawLine(
                     (int)_transformedControlPoints[i - 1][0,0], 
