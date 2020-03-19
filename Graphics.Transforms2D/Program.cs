@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using Graphics.Engine;
-using static SDL2.SDL;
 
 namespace Graphics.Transforms2D
 {
@@ -150,7 +149,7 @@ namespace Graphics.Transforms2D
         {
             using (var engine = new Sample())
             {
-                engine.Initialize("2D Transforms", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 512, 512);
+                engine.Initialize("2D Transforms", SDL2.SDL.SDL_WINDOWPOS_CENTERED, SDL2.SDL.SDL_WINDOWPOS_CENTERED, 512, 512);
                 engine.Run();
             }
         }
