@@ -2,18 +2,18 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-// Unlinke C++ templates, C# generics doesn't directly support specializing
-// types based on primitive types. C# by design doesn't support a type
-// constraint as "integral" that has +, -, *, / operations defined. A
-// approximate solution exist, but based on runtime dispatch its slow:
+// Unlike C++ templates, C# generics doesn't support specializing types based on
+// primitive types. C# by design doesn't support a type constraint such as
+// "integral" that has +, -, *, / operations defined. A approximate solution
+// exist, but based on slow runtime dispatch:
 //
 // https://gist.github.com/klmr/314d05b66c72d62bd8a184514568e22f
 //
-// We don't have a urgent need to use anything but doubles for now.
+// We don't have a current need for anything but doubles.
 
 namespace Graphics.Engine
 {
-    public class Matrix
+    public struct Matrix
     {
         readonly double[,] _matrix;
 
