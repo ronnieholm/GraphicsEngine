@@ -17,3 +17,4 @@ from the ground up.
 ## Resources
 
 - Inspired by [olcPixelGameEngine](https://github.com/OneLoneCoder/olcPixelGameEngine)
+- [3D Programming Fundaments](https://www.youtube.com/playlist?list=PLqCJpWy5Fohe8ucwhksiv9hTF5sfid8lA)
