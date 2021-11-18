@@ -9,3 +9,5 @@
   Matrix2D.Scaling(size) and so on. These methods are static with overloaded *.
 - Don't make individual points matrices. These should be vectors (so vector *
   matrix).
+- Investigate new .NET 6/C# "static abstracts in interfaces" feature in relation
+  to Matrix class. Does it allow using the Matrix class with int, double, float?
