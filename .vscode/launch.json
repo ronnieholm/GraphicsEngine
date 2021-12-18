@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Graphics.Transforms2D/bin/Debug/netcoreapp3.1/Graphics.Transforms2D.dll",
+            "program": "${workspaceFolder}/Graphics.Transforms2D/bin/Debug/net6.0/Graphics.Transforms2D.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Graphics.Transforms2D",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

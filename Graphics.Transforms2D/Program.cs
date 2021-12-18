@@ -16,7 +16,7 @@ public class Sample : GraphicsEngine
     double _translateY;
     double _scaleX = 1;
     double _scaleY = 1;
-    double _rotateAngle = 0;
+    double _rotateAngle;
 
     public Sample() => SetSquare();
 
@@ -143,14 +143,12 @@ public class Sample : GraphicsEngine
     }
 }
 
-class Program
+static class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        using (var engine = new Sample())
-        {
-            engine.Initialize("2D Transforms", SDL2.SDL.SDL_WINDOWPOS_CENTERED, SDL2.SDL.SDL_WINDOWPOS_CENTERED, 512, 512);
-            engine.Run();
-        }
+        using var engine = new Sample();
+        engine.Initialize("2D Transforms", SDL2.SDL.SDL_WINDOWPOS_CENTERED, SDL2.SDL.SDL_WINDOWPOS_CENTERED, 512, 512);
+        engine.Run();
     }
 }

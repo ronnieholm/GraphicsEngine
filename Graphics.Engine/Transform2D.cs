@@ -54,6 +54,6 @@ public class Transform2D
             _first = false;
             return;
         }
-        _transform = _transform * _operation;
+        _transform *= _operation;
     }
 }

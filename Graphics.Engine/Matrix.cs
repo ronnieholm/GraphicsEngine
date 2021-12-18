@@ -13,7 +13,7 @@ using System.Text;
 
 namespace Graphics.Engine;
 
-public struct Matrix
+public readonly struct Matrix
 {
     readonly double[,] _matrix;
 
@@ -55,8 +55,8 @@ public struct Matrix
 
         var r = new Matrix(a.Rows, a.Columns);
         for (var i = 0; i < a.Rows; i++)
-        for (var j = 0; j < a.Rows; j++)
-            r[i, j] = a[i, j] + b[i, j];
+            for (var j = 0; j < a.Rows; j++)
+                r[i, j] = a[i, j] + b[i, j];
         return r;
     }
 
@@ -67,8 +67,8 @@ public struct Matrix
 
         var r = new Matrix(a.Rows, a.Columns);
         for (var i = 0; i < a.Rows; i++)
-        for (var j = 0; j < a.Rows; j++)
-            r[i, j] = a[i, j] - b[i, j];
+            for (var j = 0; j < a.Rows; j++)
+                r[i, j] = a[i, j] - b[i, j];
         return r;
     }
 
@@ -98,8 +98,8 @@ public struct Matrix
 
         var r = new Matrix(a.Rows, a.Columns);
         for (var i = 0; i < a.Rows; i++)
-        for (var j = 0; j < a.Rows; j++)
-            r[i, j] = a[i, j] / b[i, j];
+            for (var j = 0; j < a.Rows; j++)
+                r[i, j] = a[i, j] / b[i, j];
         return r;
     }
 
